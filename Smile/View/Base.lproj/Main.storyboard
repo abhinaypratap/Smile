@@ -182,6 +182,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="0ae-he-LhM">
                             <connections>
+                                <action selector="donePressed:" destination="dfO-7w-Cw7" id="Z3L-e7-0eJ"/>
                                 <segue destination="yyf-cG-7rd" kind="unwind" unwindAction="savePlayerDetail:" id="FQb-nu-P5d"/>
                             </connections>
                         </barButtonItem>
@@ -199,6 +200,8 @@
         <!--Category-->
         <scene sceneID="5iR-Ww-i9i">
             <objects>
+                <exit id="jNF-dO-hOU" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jq6-tj-bVQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tableViewController id="d66-tU-E6r" customClass="CategoryPickerViewController" customModule="Smile" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="TJN-wO-KEA">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
@@ -231,11 +234,9 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Category" id="QGz-QO-W1o"/>
                     <connections>
-                        <segue destination="jNF-dO-hOU" kind="unwind" identifier="unwindToEventDetail" unwindAction="unwindWithSelectedCategoryWithSegue:" id="oFV-TM-IY1"/>
+                        <segue destination="jNF-dO-hOU" kind="unwind" identifier="unwindToEventDetail" unwindAction="unwindWithSelectedCategoryWithSegue:" id="TlK-Ux-U4A"/>
                     </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jq6-tj-bVQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="jNF-dO-hOU" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3355" y="84"/>
         </scene>

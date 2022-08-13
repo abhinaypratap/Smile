@@ -99,8 +99,14 @@ extension EventViewController: UITableViewDelegate {
 }
 
 extension EventViewController {
-  @IBAction func cancelToEventViewController(_ segue: UIStoryboardSegue) {}
-  @IBAction func savePlayerDetail(_ segue: UIStoryboardSegue) {}
+  @IBAction func cancelToEventViewController(_ segue: UIStoryboardSegue) {
+    
+  }
+  @IBAction func savePlayerDetail(_ segue: UIStoryboardSegue) {
+    print("savePlayerDetail")
+    getAllItems()
+    scrollToBottom(animation: true)
+  }
 }
 
 // MARK: Navigation
