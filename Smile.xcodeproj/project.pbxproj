@@ -47,6 +47,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B72A69729CB3A5100FB36C3 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				3B8EBA99285153220021D3A2 /* AppDelegate.swift */,
+				3B8EBA9B285153220021D3A2 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		3B72A69829CB3A7600FB36C3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3BF902BF2853C9BF00629464 /* Constants.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		3B8EBA8D285153220021D3A2 = {
 			isa = PBXGroup;
 			children = (
@@ -66,14 +83,13 @@
 		3B8EBA98285153220021D3A2 /* Smile */ = {
 			isa = PBXGroup;
 			children = (
-				3B8EBA99285153220021D3A2 /* AppDelegate.swift */,
-				3B8EBA9B285153220021D3A2 /* SceneDelegate.swift */,
-				3BF902C72853D11200629464 /* Model */,
+				3B72A69729CB3A5100FB36C3 /* Application */,
 				3BF902C82853D13500629464 /* View */,
 				3B8EBACF28515C2A0021D3A2 /* Controller */,
-				3BF902BF2853C9BF00629464 /* Constants.swift */,
+				3B72A69829CB3A7600FB36C3 /* Supporting Files */,
 				3B8EBAA2285153250021D3A2 /* Assets.xcassets */,
 				3BE57EBB285F75D5004533A7 /* EventModel.xcdatamodeld */,
+				3B8EBA9F285153220021D3A2 /* Main.storyboard */,
 				3B8EBAA4285153250021D3A2 /* LaunchScreen.storyboard */,
 				3B8EBAA7285153250021D3A2 /* Info.plist */,
 			);
@@ -90,17 +106,9 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		3BF902C72853D11200629464 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		3BF902C82853D13500629464 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3B8EBA9F285153220021D3A2 /* Main.storyboard */,
 				3B96424C288BA98300B502B9 /* EventCell.swift */,
 			);
 			path = View;
@@ -116,6 +124,7 @@
 				3B8EBA92285153220021D3A2 /* Sources */,
 				3B8EBA93285153220021D3A2 /* Frameworks */,
 				3B8EBA94285153220021D3A2 /* Resources */,
+				3B72A69529CB39D700FB36C3 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -171,6 +180,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3B72A69529CB39D700FB36C3 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3B8EBA92285153220021D3A2 /* Sources */ = {
@@ -334,7 +365,6 @@
 				DEVELOPMENT_TEAM = 372C6ZRL6X;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Smile/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Koyal;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -364,7 +394,6 @@
 				DEVELOPMENT_TEAM = 372C6ZRL6X;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Smile/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Koyal;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
